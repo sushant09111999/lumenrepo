@@ -1,0 +1,21 @@
+﻿@model IEnumerable<LumenTechnology.Models.Product>
+@{
+    ViewData["Title"] = "ProductDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ProductDetails</h1>
+<div class="container">
+    <div class="row">
+        @foreach (var data in Model)
+        {
+        <div class="col-4">
+            <h1 class="text-danger">@data.productName</h1>
+            <p>@data.productDesc</p>
+            <a href="#">LEARN MORE</a>
+        </div>
+        }
+    </div>
+    
+</div>
+

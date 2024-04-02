@@ -1,0 +1,43 @@
+﻿@model IEnumerable<LumenTechnology.Models.Category>
+    
+
+@{
+    ViewData["Title"] = "CategoryDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>CategoryDetails</h1>
+
+<div>
+    <h4>Category</h4>
+    <hr />
+    <div class="jumbotron">
+        @foreach (var data in Model)
+        {
+            <h1>@data.categoryId : @data.categoryName</h1>
+        }
+    </div>
+    <div class="bg-warning">
+        <table class="table table-bordered">
+            <tr>
+                <th>
+                    CategoryId
+                </th>
+                <th>
+                    CategoryName
+                </th>
+            </tr>
+            @foreach (var data in Model)
+            {
+                <tr>
+                    <td>@data.categoryId</td>
+                    <td>@data.categoryName</td>
+                </tr>
+            }
+        </table>      
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
