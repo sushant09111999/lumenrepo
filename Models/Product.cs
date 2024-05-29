@@ -13,3 +13,4 @@ namespace LumenTechnology.Models
         public int categoryId { get; set; }
     }
 }
+// welcome the repository
